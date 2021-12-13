@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
+	<display-name>Distance entre des villes</display-name>
+	<servlet>
+		<display-name>DistanceVilleServlet</display-name>
+		<servlet-name>DistanceVilleServlet</servlet-name>
+		<servlet-class>com.servlets.DistanceVilleServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<display-name>InfoVilleServlet</display-name>
+		<servlet-name>InfoVilleServlet</servlet-name>
+		<servlet-class>com.servlets.InfoVilleServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<display-name>ListeVillesServlet</display-name>
+		<servlet-name>ListeVillesServlet</servlet-name>
+		<servlet-class>com.servlets.ListeVillesServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DistanceVilleServlet</servlet-name>
+		<url-pattern>/distance</url-pattern>
+	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>InfoVilleServlet</servlet-name>
+		<url-pattern>/infosVille</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ListeVillesServlet</servlet-name>
+		<url-pattern>/listeVilles</url-pattern>
+	</servlet-mapping>
+	
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+
+</web-app>
